@@ -1,15 +1,61 @@
 @charset "utf-8";
 
-.box {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+html, body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #232323;
+  color: #fff;
+}
+.content {
+  display: inline-block;
+  transform: translateY(50%);
 }
 
+/* 스코어 */
+p {
+  font-size: 0.8rem;
+}
+
+/* 컬러코드 질문 */
+.color-code {
+  margin-top: 100px;
+}
+
+/* 컬러코드 택일 */
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 40px 0;
+  padding: 0;
+}
+.box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 1s;
+  margin: 0 10px;
+}
+
+/* 결과 표시 */
+.box.large {
+  transform: scale(50);
+}
 .modal {
   display: none;
+  position: fixed;
+  margin-top: -180px;
 }
 
-.modal.show {
-  display: block;
+/* 다시 시작 버튼 */
+.close {
+  background-color: rgba(255, 255, 255, .2);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 40px;
 }
